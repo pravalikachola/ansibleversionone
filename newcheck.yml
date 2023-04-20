@@ -2,15 +2,15 @@
 - hosts: all
   become: yes
   tasks:
-  - name: i want to install tree
+  - name: i want to install
     apt:
      name:tree
      state:present
-  - name: i want to install wget
+  - name: i want to install 
     apt:
      name:wget
      state:present
-  - name: i want to install web server
+  - name: i want to install 
     apt:
      name:apache2
      state:present
