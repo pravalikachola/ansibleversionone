@@ -4,13 +4,15 @@
   tasks:
   - name: i want to install
     apt:
-     name:tree
-     state:present
+      name:tree
+      state:present
+  - name: i want to install w
+    apt:
+      name:wget
+      state:present
   - name: i want to install 
     apt:
-     name:wget
-     state:present
-  - name: i want to install 
-    apt:
-     name:apache2
-     state:present
+      name:apache2
+      state:present
+
+   
