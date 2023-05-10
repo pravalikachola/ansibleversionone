@@ -1,2 +1,7 @@
 ---
-# tasks file for mywebrole
+# tasks file for mywebr
+- include_tasks : user.yml
+- include_tasks : myjava.yml
+- include_tasks : download.yml
+- include_tasks : permissions.yml
+
