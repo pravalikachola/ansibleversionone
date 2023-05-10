@@ -1,0 +1,18 @@
+---
+- name : copy tomcat-user file from manual server to ansible nodes open with that sudo command for opening
+  template :
+   src: templates/mytomuser.j2
+   dest: /opt/tomcat/conf/tomcat-users.xml
+
+- name : copy context file from manual server to ansible nodes open with that sudo command for opening
+  template :
+   src : templates/mytomcatcontext.j2
+   dest : /opt/tomcat/webapps/manager/META-INF/context.xml
+- name : copy host context file from manual server to ansible nodes open with that sudo command for opening
+  template :
+   src : templates/mytomcathostcontext.j2
+   dest: /opt/tomcat/webapps/host-manager/META-INF/context.xml
+- name : copy tomcat service file into node side
+  template :
+   src: templates/mytomservice.j2
+   dest: /etc/systemd/system/tomcat.service
